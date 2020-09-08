@@ -47,6 +47,15 @@ const UpdateTaquito = (id, data) =>
     .then(taco => console.log(taco));
 };
 
+const DeleteTaquito = (id) =>
+{
+    const url = `${baseUrl}${id}`;
+    fetch(url, 
+    {
+        method: 'Delete',
+    })
+}
+
 // GetTaquitos();
 // GetTaquito(2);
 
@@ -65,4 +74,9 @@ UpdateTaquito(1, {
     name: 'costillita',
     quantity: 6,
     pica: 'no'
+});
+
+DeleteTaquito(2,
+{
+
 });
