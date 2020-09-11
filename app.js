@@ -1,63 +1,73 @@
 const baseUrl = 'http://localhost:5000/';
+const taquitosList = document.getElementById('taquitos-list');
 
-const GetTaquitos = ()=>
+const GetTaquitos = async() =>
 {
-    const url = baseUrl;
-    fetch(url)
-    .then(data => data.json())
-    .then(tacos => console.log(tacos));
-};
-
-const GetTaquito = id =>
-{
-    const url = `${baseUrl}${id}`;
-    fetch(url)
-    .then(data => data.json())
-    .then(tacos => console.log(tacos));
-};
-
-const AddTaquito = taco =>
-{
-    const url = baseUrl;
-    fetch(url, 
+    const reponse = await fetch(`${baseUrl}`);
+    const data = await reponse.json();
+    // console.log(data);
+    const tacoArr = data.map(element =>
     {
-        method: 'POST',
-        body: JSON.stringify(taco),
-        headers: 
-        {
-            'Content-Type': 'application/json'
-        }
-    }).then(data => data.json())
-    .then(taco => console.log(taco));
-};
-
-const UpdateTaquito = (id, data) =>
-{
-    const url = `${baseUrl}${id}`;
-    fetch(url, 
+        // console.log(element);
+        const{id, name, quantity, pica} = element;
+        console.log(id, name, quantity, pica);
+        return {taquitoId: id, taquitoName: name, taquitoQuantity: quantity, taquitoPica: pica};   
+    });
+    tacoArr.forEach(element => 
     {
-        method: 'PUT',
-        body: JSON.stringify(data),
-        headers: 
-        {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(res => res.json())
-    .then(taco => console.log(taco));
+        taquitosList.innerHTML += 
+        `<li>
+            <div>Id: ${element.taquitoId}</div>
+            <ul>
+                <div>Name: ${element.taquitoName}</div>
+                <div>Quantity: ${element.taquitoQuantity}</div>
+                <div>Pica: ${element.taquitoPica}</div>
+            </ul><br>
+        </li>`;
+    });
 };
+GetTaquitos();
+// GetTaquitos(2);
 
-const DeleteTaquito = (id) =>
-{
-    const url = `${baseUrl}${id}`;
-    fetch(url, 
-    {
-        method: 'Delete',
-    })
-}
+// const AddTaquito = taco =>
+// {
+//     const url = baseUrl;
+//     fetch(url, 
+//     {
+//         method: 'POST',
+//         body: JSON.stringify(taco),
+//         headers: 
+//         {
+//             'Content-Type': 'application/json'
+//         }
+//     }).then(data => data.json())
+//     .then(taco => console.log(taco));
+// };
 
-// GetTaquitos();
-// GetTaquito(2);
+// const UpdateTaquito = (id, data) =>
+// {
+//     const url = `${baseUrl}${id}`;
+//     fetch(url, 
+//     {
+//         method: 'PUT',
+//         body: JSON.stringify(data),
+//         headers: 
+//         {
+//             'Content-Type': 'application/json'
+//         }
+//     })
+//     .then(res => res.json())
+//     .then(taco => console.log(taco));
+// };
+
+// const DeleteTaquito = (id) =>
+// {
+//     const url = `${baseUrl}${id}`;
+//     fetch(url, 
+//     {
+//         method: 'Delete',
+//     })
+// }
 
 // const showChanges = async ()=>
 // {
@@ -70,13 +80,13 @@ const DeleteTaquito = (id) =>
 // }
 // showChanges();
 
-UpdateTaquito(1, {
-    name: 'costillita',
-    quantity: 6,
-    pica: 'no'
-});
+// UpdateTaquito(1, {
+//     name: 'costillita',
+//     quantity: 6,
+//     pica: 'no'
+// });
 
-DeleteTaquito(2,
-{
+// DeleteTaquito(2,
+// {
 
-});
+// });
