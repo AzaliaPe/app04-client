@@ -8,7 +8,49 @@
 </head>
 <body>
     <h1>El Taquito Feliz</h1>
-    <ul id="taquitos-list"></ul>
+    <div id="taquitos-container"></div>
+    <br>
+    <h2>Agregar taco</h2>
+    <div id="taco-form">
+        <div>
+            Nombre del taco: <input type="text" name="" id="taco-name"/>
+        </div>
+        <div>
+            Cantidad: <input type="number" name="" id="taco-quantity"/>
+        </div>
+        <div>
+            ¿Es picante? (Si/No):<label for="option-spyciness"></label>
+            <select id="option-spyciness" name="option-spyciness">
+                <option value="si">Si</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <button id="btn-post-taco">Crear taco</button>
+    </div>
+
+    <br>
+    <h2>Actualizar taco</h2>
+    <div>
+        Nombre del taco:<label for="taco-option"></label>
+        <select id="taco-option" name="taco-option"></select>
+        
+        <div id="taco-form">
+            <div>
+                Nuevo nombre del taco: <input type="text" name="" id="taco-name-update"/>
+            </div>
+            <div>
+                Cantidad: <input type="number" name="" id="taco-quantity-update"/>
+            </div>
+            <div>
+                ¿Es picante? (Si/No):<label for="option-spyciness"></label>
+                <select id="option-spyciness-update" name="option-spyciness">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <button id="btn-update-taco">Crear taco</button>
+        </div>
+    </div>
 </body>
 <script src="app.js"></script>
 </html>
