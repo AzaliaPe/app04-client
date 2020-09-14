@@ -2,12 +2,20 @@ const baseUrl = 'http://localhost:5000/';
 const taquitosContainer = document.getElementById('taquitos-container');
 const btnPostTaco = document.getElementById('btn-post-taco');
 const tacosOptions = document.getElementById('taco-option');
+const btnUpdateTaco = document.getElementById('btn-update-taco');
 
 const tacoForm = 
 {
     name: document.getElementById('taco-name'),
     quantity: document.getElementById('taco-quantity'),
     pica: document.getElementById('option-spyciness')
+}
+
+const updateTacoForm = 
+{
+    name: document.getElementById('taco-name-update'),
+    quantity: document.getElementById('taco-quantity-update'),
+    pica: document.getElementById('option-spyciness-update')
 }
 
 btnPostTaco.onclick = ()=>
@@ -18,8 +26,18 @@ btnPostTaco.onclick = ()=>
         quantity: tacoForm.quantity.value,
         pica: tacoForm.pica.value
     }
-
     AddTaquito(taco);
+};
+
+btnUpdateTaco.onclick = ()=>
+{
+    const taco = 
+    {
+        name: updateTacoForm.name.value,
+        quantity: updateTacoForm.quantity.value,
+        pica: updateTacoForm.pica.value
+    }
+    UpdateTaquito(tacosOptions.value, taco);
 };
 
 const GetTaquitos = ()=>
@@ -92,7 +110,7 @@ const AddTaquito = taco =>
 
 const UpdateTaquito = (id, data) =>
 {
-    const url = `${baseUrl}/${id}`;
+    const url = `${baseUrl}${id}`;
     fetch(url, 
     {
         method: 'PUT',
@@ -103,7 +121,7 @@ const UpdateTaquito = (id, data) =>
         }
     })
     .then(res => res.json())
-    .then(taco => console.log(taco));
+    .then(taco => GetTaquitos());
 };
 
 const DeleteTaquito = id =>
