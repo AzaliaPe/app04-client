@@ -57,7 +57,6 @@ const GetTaquitos = ()=>
             const tacoSpyciness = document.createElement('div');
             const btnDeleteTaco = document.createElement('button');
             btnDeleteTaco.innerHTML = 'Eliminar x';
-
             const {name, quantity, pica, id} = taco;
 
             btnDeleteTaco.onclick = ()=>
@@ -70,7 +69,7 @@ const GetTaquitos = ()=>
             tacoOption.innerHTML = name;
             tacosOptions.appendChild(tacoOption);
 
-            tacoQuantity.innerHTML = `cantidad: ${quantity}`;
+            tacoQuantity.innerHTML = `Cantidad: ${quantity}`;
             tacoSpyciness.innerHTML = `¿Es picante?: ${pica}`;
             tacoName.innerHTML = name;
             tacoElement.appendChild(tacoName);

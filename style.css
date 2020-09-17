@@ -1,12 +1,189 @@
-body 
-{
-    background-color: #F7EFBD;
+@import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@531&display=swap');
+
+body{
+    background-color: #F1BBA2;
+     margin: 0 auto;
 }
-h1
-{
-    color: #9A0000;
+
+h1{
+    color: #ad1010;
+    /* font-family: 'Rye', cursive; */
+    font-family: 'Grenze Gotisch', cursive;
+    text-align: center;
+    font-size: 80px;
+    border-bottom-style: groove;
+    border-bottom-color: coral;
+    border-bottom-width: 25px;
+    padding-bottom: 30px;
 }
-ul
-{
-    color: #055406;
+
+#menu{
+    color: #181872;
+    font-family: 'Grenze Gotisch', cursive;
+    text-align: center;
+    font-size: 50px;
 }
+
+#taquitos-container{
+    font-family: 'Oregano', cursive;
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 23px;
+}
+
+#menu-taquitos{
+    border: 1px solid black;
+    border-style: solid;
+    border-color:  #181872;
+    border-bottom-width: 7px;
+    border-radius: 25px;
+    background-color: #a1c4e6;
+    border-width: 7px;  
+    border-bottom-style:dotted;  
+    border-left: 7px dotted #181872;
+    border-right: 7px dotted #181872;
+    border-top: 7px dotted #181872;
+    padding-right: 100px;
+    padding-left: 50px;   
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#add {
+    /* box-sizing: content-box;  
+    width: 270px;
+    height: 290px;
+    padding: 30px;  
+    border-style: solid;
+    border-color: #005000;
+    border-bottom-width: 7px;
+    border-radius: 25px;
+    background-color: #a4e597;
+    border-width: 7px;  
+    border-bottom-style:dotted;  
+    border-left: 7px dotted #005000;
+    border-right: 7px dotted#005000;
+    border-top: 7px dotted #005000;
+    padding-right: 50px;
+    margin-left: 100px;
+    margin-right: 100px; */
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #005000;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #a4e597;
+    padding-left: 50px;
+}
+
+ #add-taco{
+    color:  #005c00;
+    font-family: 'Grenze Gotisch', cursive;
+    padding-top: 0px;
+    /* padding-left: 45px; */
+    font-size: 40px;
+}
+
+#taco-form-add{
+    font-family: 'Oregano', cursive;
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 23px;
+}
+
+#taco-form-update{
+    font-family: 'Oregano', cursive;
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 23px;
+}
+
+#btn-post-taco, #btn-update-taco{
+    color: white;
+    background-color: black;
+    font-family: 'Oregano', cursive;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+button{
+    color: white;
+    background-color: #ad1010;
+    font-family: 'Oregano', cursive;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#btn-post-taco:hover, #btn-update-taco:hover, button:hover{
+    color: black;
+    background-color: white;
+}
+
+#update-taco{
+    color:  #887109;
+    font-family: 'Grenze Gotisch', cursive;
+    /* padding-left: 35px; */
+    font-size: 40px;
+}
+
+#update{
+    /* box-sizing: content-box;  
+    width: 500px;
+    height: 335px;
+    padding: 30px;  
+    border-style: solid;
+    border-color: #887109;
+    border-bottom-width: 7px;
+    border-radius: 25px;
+    background-color: #e3ec8b;
+    border-width: 7px;  
+    border-bottom-style:dotted;  
+    border-left: 7px dotted #887109;
+    border-right: 7px dotted #887109;
+    border-top: 7px dotted #887109;
+    padding-right: 50px;
+    margin-left: 100px;
+    margin-right: 100px; */
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #887109;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #e3ec8b;
+    padding-left: 50px;
+}
+.element
+{
+    float: left;
+    width: 20%;
+    color:white;
+    background-color: #181872;
+    font-family: 'Oregano', cursive;
+}
+
+#option-spyciness-update, #taco-quantity-update, #taco-name-update, #taco-option, #taco-name, #taco-quantity, #option-spyciness{
+    font-family: 'Oregano', cursive;
+    font-size: 20px;
+    color:black;
+    background-color:white;
+    border-radius: 10px;
+}
+
+#taco-quantity, #taco-quantity-update, #taco-name-update{
+    width: 21%;
+    margin-top: 10px;
+}
+
+#option-spyciness-update, #option-spyciness{
+    width: 5%;
+    margin-top: 10px;
+}
+#taco-option, #taco-name{
+    width: 25%;
+    margin-top: 10px;
+}
+
+

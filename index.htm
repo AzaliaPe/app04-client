@@ -7,11 +7,23 @@
     <title>Taquería</title>
 </head>
 <body>
+    <div>
+        <div class="element">La Mejor Taquería</div>
+        <div class="element">La Mejor Taquería</div>
+        <div class="element">La Mejor Taquería</div>
+        <div class="element">La Mejor Taquería</div>
+        <div class="element">La Mejor Taquería</div>
+    </div>
     <h1>El Taquito Feliz</h1>
-    <div id="taquitos-container"></div>
+    <div id="menu-taquitos">
+    <h3 id="menu">Menú</h3>
+        <div id="taquitos-container"></div>
+        <br>
+        <br>
+    </div>
     <br>
-    <h2>Agregar taco</h2>
-    <div id="taco-form">
+    <div id="add"><h2 id="add-taco">Agregar taco</h2>
+    <div id="taco-form-add">
         <div>
             Nombre del taco: <input type="text" name="" id="taco-name"/>
         </div>
@@ -27,14 +39,15 @@
         </div>
         <button id="btn-post-taco">Crear taco</button>
     </div>
-
+    </div>
     <br>
-    <h2>Actualizar taco</h2>
-    <div>
+    <br>
+    <div id="update">
+    <h2 id="update-taco">Actualizar taco</h2>
+    <div id="taco-form-update">
         Nombre del taco:<label for="taco-option"></label>
         <select id="taco-option" name="taco-option"></select>
-        
-        <div id="taco-form">
+        <div>
             <div>
                 Nuevo nombre del taco: <input type="text" name="" id="taco-name-update"/>
             </div>
@@ -51,6 +64,8 @@
             <button id="btn-update-taco">Actualizar</button>
         </div>
     </div>
+    </div>
+    <br>
 </body>
 <script src="app.js"></script>
 </html>
